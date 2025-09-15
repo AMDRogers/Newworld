@@ -11,11 +11,12 @@
     <PackageJsonScriptsPreview Condition="$(PackageJsonScriptsPreview) == ''">vite preview</PackageJsonScriptsPreview>
     <PackageJsonScriptsTestUnit Condition="$(PackageJsonScriptsTestUnit) == ''">vitest</PackageJsonScriptsTestUnit>
     <PackageJsonScriptsTestE2e Condition="$(PackageJsonScriptsTestE2e) == ''">playwright test</PackageJsonScriptsTestE2e>
-    <PackageJsonDependenciesAzureMsalBrowser Condition="$(PackageJsonDependenciesAzureMsalBrowser) == ''">^4.20.0</PackageJsonDependenciesAzureMsalBrowser>
-    <PackageJsonDependenciesAzureMsalReact Condition="$(PackageJsonDependenciesAzureMsalReact) == ''">^3.0.18</PackageJsonDependenciesAzureMsalReact>
+    <PackageJsonEnginesNode Condition="$(PackageJsonEnginesNode) == ''">20.x</PackageJsonEnginesNode>
+    <PackageJsonDependenciesAzureMsalBrowser Condition="$(PackageJsonDependenciesAzureMsalBrowser) == ''">^4.22.1</PackageJsonDependenciesAzureMsalBrowser>
+    <PackageJsonDependenciesAzureMsalReact Condition="$(PackageJsonDependenciesAzureMsalReact) == ''">^3.0.19</PackageJsonDependenciesAzureMsalReact>
     <PackageJsonDependenciesTailwindcssPostcss Condition="$(PackageJsonDependenciesTailwindcssPostcss) == ''">^4.1.12</PackageJsonDependenciesTailwindcssPostcss>
     <PackageJsonDependenciesTailwindcssVite Condition="$(PackageJsonDependenciesTailwindcssVite) == ''">^4.1.12</PackageJsonDependenciesTailwindcssVite>
-    <PackageJsonDependenciesTanstackReactQuery Condition="$(PackageJsonDependenciesTanstackReactQuery) == ''">^5.85.3</PackageJsonDependenciesTanstackReactQuery>
+    <PackageJsonDependenciesTanstackReactQuery Condition="$(PackageJsonDependenciesTanstackReactQuery) == ''">^5.87.4</PackageJsonDependenciesTanstackReactQuery>
     <PackageJsonDependenciesDaisyui Condition="$(PackageJsonDependenciesDaisyui) == ''">^5.0.50</PackageJsonDependenciesDaisyui>
     <PackageJsonDependenciesReact Condition="$(PackageJsonDependenciesReact) == ''">^19.1.1</PackageJsonDependenciesReact>
     <PackageJsonDependenciesReactDom Condition="$(PackageJsonDependenciesReactDom) == ''">^19.1.1</PackageJsonDependenciesReactDom>
