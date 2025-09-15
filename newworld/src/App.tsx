@@ -2,7 +2,6 @@
 import {  lazy } from 'react';
 import './App.css'
 import { useMsal } from '@azure/msal-react';
-import { loginRequest } from './authConfig';
 
 //import { POST, SafeFetch } from './helpers/fetch';
 //import type { SilentRequest } from "@azure/msal-browser";
@@ -21,30 +20,6 @@ const Plain = lazy(() => import('./screens/home/plain/Plain'));
 const CustomerDetails = lazy(() => import('./screens/customer/customerDetails/CustomerDetails'));
 const Customer = lazy(() => import('./screens/customer/customer/Customer'));
 const Logout = lazy(() => import('./helpers/logout/Logout'));
-
-const App = () => {
-    const { instance, accounts } = useMsal();               
-    const handleLogin = () => {                             
-        instance.loginPopup(loginRequest).catch(e => {      
-            console.error(e);                               
-        });                                                 
-    };                                                      
-    const handleLogout = () => {                            
-        instance.logoutPopup();                             
-    };                                                      
-    return (
-        <div>
-            {accounts.length > 0 ? (                                     
-                <>                                                       
-                    <p>Welcome, {accounts[0].username}</p>               
-        < button onClick = { handleLogout } > Logout</button >        
-                </>                                                      
-            ) : (                                                         
-                < button onClick = { handleLogin } > Login with Azure</button >   
-            )}                                                            
-        </div >
-
-}
 
 function App() {
     const { instance, accounts } = useMsal();
