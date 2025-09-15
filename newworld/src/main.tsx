@@ -12,16 +12,16 @@ const queryClient = new QueryClient;
 
 
 const msalInstance = new PublicClientApplication(msalConfig);
-
+const root = ReactDOM.createRoot(document.getElementById('root')); 
+root.render(
+    <MsalProvider instance={msalInstance}>
+        <App/>
+    </MsalProvider>
+);
 
 
 
 async function bootstrap() {
-
-
-
-
-
     //await msalInstance.initialize();
 
 
@@ -55,7 +55,4 @@ async function bootstrap() {
 }
 
 
-
-
 bootstrap();
-

@@ -11,7 +11,7 @@ export const msalConfig = {
         navigateToLoginRequestUrl: true
     },
     cache: {
-        cacheLocation: "localStorage",  // or "localStorage" for multi-tab SSO
+        cacheLocation: "localStorage",
         storeAuthStateInCookie: false,
     },
 };
