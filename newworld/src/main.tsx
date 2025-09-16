@@ -18,8 +18,6 @@ const msalInstance = new PublicClientApplication(msalConfig);
 
 async function bootstrap() {
     await msalInstance.initialize();
-
-
     try {
         const response = await msalInstance.handleRedirectPromise();
         if (response && response.account) {
@@ -29,19 +27,21 @@ async function bootstrap() {
                 const accessToken = response.accessToken;
                 await SafeFetch("api/StoreToken", POST({ Token: accessToken }));
             }
-        } else {
-
+        }
+        else {
             const accounts = msalInstance.getAllAccounts();
             if (accounts.length > 0) {
                 msalInstance.setActiveAccount(accounts[0]);
-            } else {
+            }
+            else {
 
                 // Uncomment if you want automatic login on each site
                 await msalInstance.loginRedirect(loginRequest);
 
             }
         }
-    } catch (error) {
+    }
+    catch (error) {
         console.error("MSAL redirect error:", error);
     }
 
